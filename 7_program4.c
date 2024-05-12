@@ -2,12 +2,18 @@
 int DisplayFact(int iNo)
 {
     int iCnt = 0;
-    int iFact = 1;
+    int iOddFact = 1;
     for (int iCnt =1;iCnt <=iNo ;iCnt++)
     {
-        iFact = iFact * iCnt;
+        if (iCnt % 2!=0)
+        {
+            
+        iOddFact = iOddFact * iCnt;
+            
+            
+        }
     }
-    return iFact;
+    return iOddFact;
 }
 int main(int argc, char **argv)
 {
@@ -15,7 +21,7 @@ int main(int argc, char **argv)
     printf("Enter Number : ");
     scanf("%d",&iValue);
     iRet = DisplayFact(iValue);
-    printf("Factorial of number is %d",iRet);
+    printf("Odd Factorial of number is %d",iRet);
     return 0;
 
 }

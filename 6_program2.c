@@ -25,5 +25,6 @@ int main (){
   scanf("%d",&iValue);
 
   DisplayNum(iValue);
+  return 0;
   
 }

@@ -2,12 +2,18 @@
 int DisplayFact(int iNo)
 {
     int iCnt = 0;
-    int iFact = 1;
+    int iEvenFact = 1;
     for (int iCnt =1;iCnt <=iNo ;iCnt++)
     {
-        iFact = iFact * iCnt;
+        if (iCnt % 2==0)
+        {
+            
+        iEvenFact = iEvenFact * iCnt;
+            
+            
+        }
     }
-    return iFact;
+    return iEvenFact;
 }
 int main(int argc, char **argv)
 {
@@ -15,7 +21,7 @@ int main(int argc, char **argv)
     printf("Enter Number : ");
     scanf("%d",&iValue);
     iRet = DisplayFact(iValue);
-    printf("Factorial of number is %d",iRet);
+    printf("Even Factorial of number is %d",iRet);
     return 0;
 
 }
